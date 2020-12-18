@@ -1,6 +1,6 @@
 # flutter_dust
 
-A new Flutter application.
+It shows your location's air status
 
 ## Getting Started
 
