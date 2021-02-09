@@ -8,7 +8,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_dust/models/AirResult.dart';
+import 'package:flutter_dust/models/air_result.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
