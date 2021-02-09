@@ -68,7 +68,7 @@ class _MainState extends State<Main> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Text("얼굴사진"),
+                            Icon(getIcon(result)),
                             Text("${result.data.current.pollution.aqius}", style: TextStyle(fontSize: 30),),
                             Text(getString(result), style: TextStyle(fontSize: 20),),
                           ],
@@ -132,5 +132,15 @@ class _MainState extends State<Main> {
       return "나쁨";
     return "최악";
     
+  }
+
+  IconData getIcon(AirResult result) {
+    if (result.data.current.pollution.aqius <= 50)
+      return Icons.tag_faces;
+    if (result.data.current.pollution.aqius <= 100)
+      return Icons.face;
+    if (result.data.current.pollution.aqius <= 150)
+      return Icons.thumb_down;
+    return Icons.warning;
   }
 }
